@@ -11,6 +11,7 @@ body {
     max-width: 1366px;
 }
 
+/*Rules*/
 .modal {
     display: flex;
     flex-direction: column;
