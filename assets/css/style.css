@@ -108,7 +108,6 @@ body {
 /*Rules*/
 
 
-
 .screenGame {
     display: none;
     flex-direction: column;
@@ -163,6 +162,7 @@ body {
     position: relative;
     z-index: 1;
     top: 7rem;
+    cursor: pointer;
 }
 #paper {
     grid-area: paper;
@@ -170,6 +170,7 @@ body {
     position: relative;
     z-index: 1;
     right: -5rem;
+    cursor: pointer;
 }
 #rock {
     grid-area: rock;
@@ -177,6 +178,7 @@ body {
     position: relative;
     z-index: 1;
     align-self: top;
+    cursor: pointer;
 }
 #lizard {
     grid-area: lizard;
@@ -184,6 +186,7 @@ body {
     position: relative;
     z-index: 1;
     align-self: top;
+    cursor: pointer;
 }
 #spock {
     grid-area: spock;
@@ -191,6 +194,7 @@ body {
     position: relative;
     z-index: 1;
     left: -5rem;
+    cursor: pointer;
 }
 
 
