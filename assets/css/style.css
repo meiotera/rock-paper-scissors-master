@@ -4,11 +4,74 @@
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-size: 62.5%;
     margin: 0 auto;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;    
 }
 body {
     max-width: 1366px;
+    background-color: hsl(214, 47%, 23%);
+}
+
+:root {
+    --ScissorsGradient1: hsl(39, 89%, 49%);
+    --ScissorsGradient2: hsl(40, 84%, 53%);
+    --PaperGradient1: hsl(230, 89%, 62%);
+    --PaperGradient2: hsl(230, 89%, 65%);
+    --RockGradient1: hsl(349, 71%, 52%);
+    --RockGradient2: hsl(349, 70%, 56%);
+    --LizardGradient1: hsl(261, 73%, 60%);
+    --LizardGradient2: hsl(261, 72%, 63%);
+    --Cyan1: hsl(189, 59%, 53%);
+    --Cyan2: hsl(189, 58%, 57%);
+    --DarkText: hsl(229, 25%, 31%);
+    --ScoreText: hsl(229, 64%, 46%);
+    --HeaderOutline: hsl(217, 16%, 45%);
+    --RadialGradient1: hsl(214, 47%, 23%);
+    --RadialGradient2: hsl(237, 49%, 15%);
+    --score: white;
+}
+
+/*Score*/
+
+.scoreScreen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: .5rem solid var(--HeaderOutline);
+    margin: 3rem;
+    border-radius: 1rem;
+    padding: 1.5rem;
+
+}
+.logo {
+    width: 6rem;
+    margin: 0;
+}
+.score{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 0;  
+    width: 8rem;
+    height: 8rem;
+    border-radius: .5rem;
+    margin: 0;
+    background-color: var(--score);
+}
+.score .scoreTitle{
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    line-height: 1;
+    color: var(--ScoreText);
+}
+.score #numberOfPoints {
+    font-size: 4.5rem;
+    line-height: 1;
+    color: var(--DarkText);
+}
+.logo img {
+    width: 100%;    
 }
 
 /*Rules*/
@@ -17,17 +80,155 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 100vh;    
-   
+    height: 100vh;   
+    background-color: var(--score);    
 }
 .modal h1 {
     font-size: 3rem;
     margin-top: 2rem;
-    color: hsl(229, 25%, 31%);
+    color: var(--DarkText);
     text-transform: uppercase;
 }
 .modal img {
-    padding: 2rem;
-    
+    padding: 2rem;    
     width: 100%;
+}
+
+.btRules {
+    background-color: transparent;
+    border: .3rem solid var(--HeaderOutline);
+    border-radius: .8rem;   
+    font-size: 2rem;
+    color: var(--score);
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+    padding: 1rem 5rem;
+
+}
+/*Rules*/
+
+
+
+.screenGame {
+    display: none;
+    flex-direction: column;
+    height: 100vh;    
+    justify-content: space-evenly;
+}
+.container-players {        
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    padding: 2rem;
+}
+.players {        
+    height: 100%; 
+    max-width: 440px;     
+    background-image: url(../../images/bg-pentago.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 320px;
+    display: grid;      
+    grid-template-areas: 
+    'scissors scissors'
+    'spock    paper'
+    'lizard   rock';
+    
+}
+
+.icon-player-area {    
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.icon-player {
+    width: 4rem;    
+}
+#scissors::before, #paper::before, #lizard::before, #spock::before, #rock:before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    background-color: var(--score);
+}
+#scissors {
+    grid-area: scissors;
+    background-image: radial-gradient(circle, var(--ScissorsGradient1), var(--ScissorsGradient2));
+    position: relative;
+    z-index: 1;
+    top: 7rem;
+}
+#paper {
+    grid-area: paper;
+    background-image: radial-gradient(circle, var(--PaperGradient1), var(--PaperGradient2));
+    position: relative;
+    z-index: 1;
+    right: -5rem;
+}
+#rock {
+    grid-area: rock;
+    background-image: radial-gradient(circle, var(--RockGradient1), var(--RockGradient2));
+    position: relative;
+    z-index: 1;
+    align-self: top;
+}
+#lizard {
+    grid-area: lizard;
+    background-image: radial-gradient(circle, var(--LizardGradient1), var(--LizardGradient2));
+    position: relative;
+    z-index: 1;
+    align-self: top;
+}
+#spock {
+    grid-area: spock;
+    background-image: radial-gradient(circle, var(--Cyan1), var(--Cyan2));
+    position: relative;
+    z-index: 1;
+    left: -5rem;
+}
+
+
+/*success*/
+
+.success {
+    display: flex;      
+}
+
+.success span {
+    display: block;
+    margin:  10rem 0 0 0;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--score);
+}
+.success .icon-player-area {
+    width: 12rem;
+    height: 12rem;
+}
+.success-winner {
+    text-align: center;
+    margin-top: 13rem;
+}
+.success-winner h1 {
+    color: var(--score);
+    margin-bottom: 2rem;
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+.btagain {
+    background-color: var(--score);
+    color: var(--DarkText);
+    border: none;
+}
+
+
+.displayNone {
+    display: none;
 }

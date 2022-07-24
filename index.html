@@ -3,29 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  
+  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
-<!--
-  Score
-  Rules
-
-  You Picked
-  The House Picked
-
-  You Win
-  You Lose
-
-  Play Again
--->
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <link rel="stylesheet" href="assets/css/style.css">
  
 </head>
 <body>
-
+  <!--Modal regras-->
   <div class="modal rules">
     <div class="title">
       <h1>Rules</h1>
@@ -37,11 +25,83 @@
       <img src="images/icon-close.svg" alt="icon-close">
     </div>
   </div>
+  <!--Fim Modal regras-->
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <!--Tela game-->
+  <div class="screenGame">
+    <!--Score / pontuação-->
+    <header class="scoreScreen">
+      <div class="logo">
+        <img src="images/logo-bonus.svg" alt="logo">
+      </div>
+      <div class="score">
+        <span class="scoreTitle">Score</span>
+        <span id="numberOfPoints">12</span>
+      </div>
+    </header>
+    <!--Fim Score / pontuação-->
+
+    <!--screen players / tela jogadores-->
+    <div class="container-players">
+      <!--End of game modal / Modal fim de game-->
+      <div class="success displayNone">
+        <div class="choice">
+          <div class="icon-player-area" id="scissors">
+            <img src="images/icon-scissors.svg" class="icon-player" alt="Scissors">       
+          </div>
+          <span>You picked</span>
+        </div>
+        <div class="choice">
+          <div class="icon-player-area" id="scissors">
+            <img src="images/icon-scissors.svg" class="icon-player" alt="Scissors">        
+          </div>
+          <span>The house picked</span>
+        </div>
+      </div>      
+      <div class="success-winner displayNone">
+        <div class="msg-winner">
+          <h1>You Win</h1>
+        </div>
+        <div class="btn">
+          <button class="btRules btagain">Play Again</button>
+        </div>
+      </div>
+      
+      <!--player area screen / Tela area de jogadores-->
+      <div class="players ">               
+        <div class="icon-player-area" id="scissors">
+          <img src="images/icon-scissors.svg" class="icon-player" alt="Scissors">        
+        </div>
+        <div class="icon-player-area" id="paper">
+          <img src="images/icon-paper.svg" class="icon-player" alt="Paper">
+        </div>
+        <div class="icon-player-area" id="rock">
+          <img src="images/icon-rock.svg" class="icon-player" alt="Rock">
+        </div>
+        <div class="icon-player-area" id="lizard">
+          <img src="images/icon-lizard.svg" class="icon-player" alt="lizard">
+        </div>
+        <div class="icon-player-area" id="spock">
+          <img src="images/icon-spock.svg" class="icon-player" alt="spock">
+        </div>
+      </div>     
+    </div>    
+
+    <!--rules button / Botão de regras-->
+    <div class="btn">
+      <button class="btRules">Rules</button>
+    </div>
   </div>
+
+
+
+
+  <!--
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+  -->
 </body>
 </html>
