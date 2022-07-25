@@ -215,6 +215,7 @@ body {
 .success .icon-player-area {
     width: 12rem;
     height: 12rem;
+    
 }
 .success-winner {
     text-align: center;
@@ -235,4 +236,18 @@ body {
 
 .displayNone {
     display: none;
+}
+.choice #spock {
+    left: 0;
+    top: 7rem;
+}
+.choice #lizard {
+    top: 7rem;
+}
+.choice #rock {
+    top: 7rem;
+}
+.choice #paper {
+    right: 0;
+    top: 7rem;
 }
