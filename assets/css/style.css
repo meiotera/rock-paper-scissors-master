@@ -4,8 +4,9 @@
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-size: 62.5%;
     margin: 0 auto;
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
+
 body {
     max-width: 1366px;
     background-color: hsl(214, 47%, 23%);
@@ -42,36 +43,41 @@ body {
     padding: 1.5rem;
 
 }
+
 .logo {
     width: 6rem;
     margin: 0;
 }
-.score{
+
+.score {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem 0;  
+    padding: 1.5rem 0;
     width: 8rem;
     height: 8rem;
     border-radius: .5rem;
     margin: 0;
     background-color: var(--score);
 }
-.score .scoreTitle{
+
+.score .scoreTitle {
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: .2rem;
     line-height: 1;
     color: var(--ScoreText);
 }
+
 .score #numberOfPoints {
     font-size: 4.5rem;
     line-height: 1;
     color: var(--DarkText);
 }
+
 .logo img {
-    width: 100%;    
+    width: 100%;
 }
 
 /*Rules*/
@@ -80,24 +86,26 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 100vh;   
-    background-color: var(--score);    
+    height: 100vh;
+    background-color: var(--score);
 }
+
 .modal h1 {
     font-size: 3rem;
     margin-top: 2rem;
     color: var(--DarkText);
     text-transform: uppercase;
 }
+
 .modal img {
-    padding: 2rem;    
+    padding: 2rem;
     width: 100%;
 }
 
 .btRules {
     background-color: transparent;
     border: .3rem solid var(--HeaderOutline);
-    border-radius: .8rem;   
+    border-radius: .8rem;
     font-size: 2rem;
     color: var(--score);
     letter-spacing: .5rem;
@@ -105,49 +113,58 @@ body {
     padding: 1rem 5rem;
 
 }
+
 /*Rules*/
 
 
 .screenGame {
     display: none;
     flex-direction: column;
-    height: 100vh;    
+    height: 100vh;
     justify-content: space-evenly;
 }
-.container-players {        
+
+.container-players {
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 60%;
     padding: 2rem;
 }
-.players {        
-    height: 100%; 
-    max-width: 440px;     
+
+.players {
+    height: 100%;
+    max-width: 440px;
     background-image: url(../../images/bg-pentago.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 320px;
-    display: grid;      
-    grid-template-areas: 
-    'scissors scissors'
-    'spock    paper'
-    'lizard   rock';
-    
+    display: grid;
+    grid-template-areas:
+        'scissors scissors'
+        'spock    paper'
+        'lizard   rock';
+
 }
 
-.icon-player-area {    
+.icon-player-area {
     border-radius: 50%;
     width: 10rem;
     height: 10rem;
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
 }
+
 .icon-player {
-    width: 4rem;    
+    width: 4rem;
 }
-#scissors::before, #paper::before, #lizard::before, #spock::before, #rock:before{
+
+#scissors::before,
+#paper::before,
+#lizard::before,
+#spock::before,
+#rock:before {
     content: '';
     z-index: -1;
     position: absolute;
@@ -156,6 +173,7 @@ body {
     border-radius: 50%;
     background-color: var(--score);
 }
+
 #scissors {
     grid-area: scissors;
     background-image: radial-gradient(circle, var(--ScissorsGradient1), var(--ScissorsGradient2));
@@ -164,6 +182,7 @@ body {
     top: 7rem;
     cursor: pointer;
 }
+
 #paper {
     grid-area: paper;
     background-image: radial-gradient(circle, var(--PaperGradient1), var(--PaperGradient2));
@@ -172,6 +191,7 @@ body {
     right: -5rem;
     cursor: pointer;
 }
+
 #rock {
     grid-area: rock;
     background-image: radial-gradient(circle, var(--RockGradient1), var(--RockGradient2));
@@ -180,6 +200,7 @@ body {
     align-self: top;
     cursor: pointer;
 }
+
 #lizard {
     grid-area: lizard;
     background-image: radial-gradient(circle, var(--LizardGradient1), var(--LizardGradient2));
@@ -188,6 +209,7 @@ body {
     align-self: top;
     cursor: pointer;
 }
+
 #spock {
     grid-area: spock;
     background-image: radial-gradient(circle, var(--Cyan1), var(--Cyan2));
@@ -197,56 +219,73 @@ body {
     cursor: pointer;
 }
 
-
 /*success*/
 
 .success {
-    display: flex;      
+    display: flex;
 }
 
 .success span {
     display: block;
-    margin:  10rem 0 0 0;
+    margin: 10rem 0 0 0;
     text-align: center;
     font-size: 1.5rem;
     text-transform: uppercase;
     color: var(--score);
+    z-index: 99;
 }
+
 .success .icon-player-area {
     width: 12rem;
     height: 12rem;
-    
+
 }
+
 .success-winner {
     text-align: center;
     margin-top: 13rem;
 }
+
 .success-winner h1 {
     color: var(--score);
     margin-bottom: 2rem;
     font-size: 6rem;
     text-transform: uppercase;
 }
+
+.shadow{
+    box-shadow: 0px 0px 0px 24px hsla(214, 48%, 19%, 0.452), 0px 0px 0px 48px hsla(214, 56%, 25%, 0.541), 0px 0px 0px 96px hsla(214, 46%, 55%, 0.425);  
+      
+}
+
 .btagain {
     background-color: var(--score);
     color: var(--DarkText);
+    letter-spacing: .5rem;
+    text-transform: uppercase;
     border: none;
+    border-radius: .8rem;
+    font-size: 2rem;
+    padding: 1rem 5rem;
 }
-
 
 .displayNone {
     display: none;
 }
+
 .choice #spock {
     left: 0;
     top: 7rem;
 }
+
 .choice #lizard {
     top: 7rem;
 }
+
 .choice #rock {
     top: 7rem;
 }
+
 .choice #paper {
     right: 0;
     top: 7rem;
