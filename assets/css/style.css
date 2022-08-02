@@ -253,9 +253,9 @@ body {
     text-transform: uppercase;
 }
 
-.shadow{
-    box-shadow: 0px 0px 0px 24px hsla(214, 48%, 19%, 0.452), 0px 0px 0px 48px hsla(214, 56%, 25%, 0.541), 0px 0px 0px 96px hsla(214, 46%, 55%, 0.425);  
-      
+.shadow {
+    box-shadow: 0px 0px 0px 24px hsla(214, 48%, 19%, 0.452), 0px 0px 0px 48px hsla(214, 56%, 25%, 0.541), 0px 0px 0px 96px hsla(214, 46%, 55%, 0.425);
+
 }
 
 .btagain {
@@ -289,4 +289,76 @@ body {
 .choice #paper {
     right: 0;
     top: 7rem;
+}
+
+@media (min-width: 1024px) {
+    .success .icon-player-area {
+        width: 20rem;
+        height: 20rem;
+
+    }
+
+    .container-players .success-winner {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 15rem;
+
+    }
+
+    .container-players .success {
+        margin-top: 10rem;
+    }
+
+    .icon-player-area {
+        width: 14rem;
+        height: 14rem;
+
+    }
+
+    .btagain {
+        font-size: 1.5rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .success-winner h1 {
+        z-index: 100;
+        font-size: 5rem;
+    }
+
+    .shadow {
+        box-shadow: 0px 0px 0px 44px hsla(214, 48%, 19%, 0.452), 0px 0px 0px 98px hsla(214, 56%, 25%, 0.541), 0px 0px 0px 156px hsla(214, 46%, 55%, 0.425);
+    }
+
+    .container-players {
+        position: relative;
+        margin-top: 0;
+        height: 100%;
+    }
+
+    .scoreScreen {
+        margin: 3rem 25rem;
+    }
+
+    .players {
+        max-width: 640px;
+        background-size: 380px;
+    }
+
+    .score {
+        width: 18rem;
+        height: 18rem;
+    }
+
+    .logo {
+        width: 16rem;
+    }
+
+    .score .scoreTitle {
+        font-size: 2rem;
+    }
+
+    .score #numberOfPoints {
+        font-size: 12rem;
+    }
 }
